@@ -1,0 +1,15 @@
+CREATE TABLE Cong_Ty
+( ID_CongTy varchar(10) PRIMARY KEY,
+CEO nvarchar(50) NOT NULL,
+TenCongTy nvarchar(50));
+
+
+CREATE TABLE DC_CongTy
+(ID_CongTy varchar(10) PRIMARY KEY ,
+DiaChi nvarchar(50),
+CONSTRAINT fk_DC_CongTy_ID_CongTy
+FOREIGN KEY (ID_CongTy)
+REFERENCES Cong_Ty (ID_CongTy)
+)
+
+GO
